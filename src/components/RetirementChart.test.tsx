@@ -127,7 +127,7 @@ describe('RetirementChart', () => {
   it('shows simulation subtitle when monteCarlo is active', () => {
     const mc = { successRate: 87, points: [] }
     render(<RetirementChart {...defaultProps} monteCarlo={mc} />)
-    expect(screen.getByText(/1000 simulations/i)).toBeInTheDocument()
+    expect(screen.getByText(/10,000 simulations/i)).toBeInTheDocument()
   })
 
   it('shows pension reference line when pensionStartAge differs from retirementAge', () => {

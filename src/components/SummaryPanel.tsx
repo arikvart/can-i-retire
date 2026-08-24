@@ -80,7 +80,7 @@ export function SummaryPanel({ result, retirementAge, profile }: Props) {
   const viabilityStatus = mc ? mcStatus! : (result.isViable ? 'good' : 'bad')
   const viabilityValue = mc ? `${successRate}%` : (result.isViable ? 'Yes' : `Age ${result.fundsDepletedAge}`)
   const viabilitySub = mc
-    ? 'success rate (1000 simulations)'
+    ? 'success rate (10,000 simulations)'
     : result.isViable
       ? `${result.yearsOfRetirement} years funded`
       : `${result.yearsOfRetirement} yrs before depletion`

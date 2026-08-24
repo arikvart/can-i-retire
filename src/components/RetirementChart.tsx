@@ -109,7 +109,7 @@ export function RetirementChart({
           </h2>
           {monteCarlo && (
             <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
-              Shaded band: 10th–90th percentile (1000 simulations)
+              Shaded band: 10th–90th percentile (10,000 simulations)
             </p>
           )}
         </div>
