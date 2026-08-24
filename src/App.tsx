@@ -12,7 +12,7 @@ import { useLocalStorage, clearLocalStorage } from './hooks/useLocalStorage'
 const DEFAULT_PROFILE: FinancialProfile = {
   currentAge: 40,
   monthlyIncome: 25000,
-  monthlyExpenses: 29000,
+  monthlyExpenses: 21000,
   currentSavings: 1000000,
 }
 
@@ -21,7 +21,7 @@ const DEFAULT_ASSUMPTIONS: RetirementAssumptions = {
   pensionStartAge: 67,
   lifeExpectancy: 90,
   inflationRate: 3,
-  investmentReturnRate: 7,
+  investmentReturnRate: 6.5,
   monthlyPension: 10000,
   returnStdDev: 0,
   inflationStdDev: 0,
