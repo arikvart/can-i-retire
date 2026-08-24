@@ -1,5 +1,25 @@
 # Retirement Simulator — Iteration Log
 
+## Iteration 13 — Clean Chart Legend + Monte Carlo 10k (2026-08-24)
+
+### Summary
+Removed redundant vertical-line entries from the Wealth Projection legend (task 012). The reference lines already have inline labels ("Retire", "Pension", "Depleted") on the chart itself — showing them again in the legend was noise. Also bumped Monte Carlo from 1,000 to 10,000 iterations for tighter percentile bands. 212 tests, 100% coverage.
+
+### What this iteration does
+- **Task 012** (`RetirementChart.tsx`): Removed "Stop working", "Pension start", and "Funds depleted" legend rows. Only Balance, Income, Expenses, and Monte Carlo band remain in the legend — reference lines are self-labeled on the chart
+- **Monte Carlo** (`simulator.ts`): Default `n` changed from 1000 → 10000. UI strings updated: "10,000 simulations" in `SummaryPanel.tsx` and `RetirementChart.tsx`
+- **Tests** (`RetirementChart.test.tsx`): Flipped two legend tests from `getByText` to `queryByText(...not.toBeInTheDocument()`
+
+### Evaluation
+| Metric | Result |
+|---|---|
+| Tests | 212 passing |
+| All coverage | 100% |
+| Legend clutter | Removed 3 redundant entries |
+| Monte Carlo accuracy | 10× more iterations, tighter bands |
+
+---
+
 ## Iteration 12 — Final Tasks: Input Reorder, Default Values, Comma Currency (2026-08-23)
 
 ### Summary

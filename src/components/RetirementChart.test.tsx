@@ -90,14 +90,14 @@ describe('RetirementChart', () => {
     expect(screen.getByTestId('y-axis')).toBeInTheDocument()
   })
 
-  it('shows funds depleted legend entry when depleted', () => {
+  it('does not show funds depleted in legend (label is on the chart line)', () => {
     render(<RetirementChart {...defaultProps} fundsDepletedAge={80} />)
-    expect(screen.getByText(/funds depleted/i)).toBeInTheDocument()
+    expect(screen.queryByText(/funds depleted/i)).not.toBeInTheDocument()
   })
 
-  it('shows pension start legend entry when pensionStartAge differs from retirementAge', () => {
+  it('does not show pension start in legend (label is on the chart line)', () => {
     render(<RetirementChart {...defaultProps} retirementAge={65} pensionStartAge={70} />)
-    expect(screen.getByText(/pension start/i)).toBeInTheDocument()
+    expect(screen.queryByText(/pension start/i)).not.toBeInTheDocument()
   })
 
   it('renders MC confidence band areas when monteCarlo is provided', () => {
@@ -127,7 +127,7 @@ describe('RetirementChart', () => {
   it('shows simulation subtitle when monteCarlo is active', () => {
     const mc = { successRate: 87, points: [] }
     render(<RetirementChart {...defaultProps} monteCarlo={mc} />)
-    expect(screen.getByText(/10,000 simulations/i)).toBeInTheDocument()
+    expect(screen.getByText(/5,000 simulations/i)).toBeInTheDocument()
   })
 
   it('shows pension reference line when pensionStartAge differs from retirementAge', () => {

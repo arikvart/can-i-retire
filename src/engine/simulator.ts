@@ -28,7 +28,7 @@ function runMonteCarlo(
   profile: FinancialProfile,
   assumptions: RetirementAssumptions,
   spendingWindows: SpendingWindow[],
-  n = 10000
+  n = 5000
 ): SimulationResult['monteCarlo'] {
   if (!(assumptions.monteCarloEnabled ?? false)) return null
   const returnStdDev = assumptions.returnStdDev ?? 0

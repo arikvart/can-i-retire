@@ -121,7 +121,7 @@ describe('SummaryPanel', () => {
     const mcResult: SimulationResult = { ...viableResult, monteCarlo: { successRate: 87, points: [] } }
     render(<SummaryPanel result={mcResult} retirementAge={67} profile={profile} />)
     expect(screen.getByText('87%')).toBeInTheDocument()
-    expect(screen.getByText(/success rate \(10,000 simulations\)/i)).toBeInTheDocument()
+    expect(screen.getByText(/success rate \(5,000 simulations\)/i)).toBeInTheDocument()
   })
 
   it('shows Success Rate label when monteCarlo is active', () => {

@@ -10,3 +10,4 @@
 [x] task 009 - replace the input box order of inflation and investment return.
 [x] task 010 - set defaults (also when hitting reset) to: current age 40, monthly income 15000, monthly expenses 25000, current savings 1000000, monthly pension 10000
 [x] task 011 - use commas "," in cells which are currency
+[x] task 012 - remove vertical lines text from "welth projection" legend. keep only the text on top of the vertical line.

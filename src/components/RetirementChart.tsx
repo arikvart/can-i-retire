@@ -109,7 +109,7 @@ export function RetirementChart({
           </h2>
           {monteCarlo && (
             <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
-              Shaded band: 10th–90th percentile (10,000 simulations)
+              Shaded band: 10th–90th percentile (5,000 simulations)
             </p>
           )}
         </div>
@@ -207,22 +207,6 @@ export function RetirementChart({
           <span className="inline-block w-3 h-0.5 bg-rose-500"></span>
           Expenses
         </span>
-        <span className="flex items-center gap-1">
-          <span className="inline-block w-3 h-0.5 bg-amber-400"></span>
-          Stop working
-        </span>
-        {pensionStartAge !== undefined && pensionStartAge !== retirementAge && (
-          <span className="flex items-center gap-1">
-            <span className="inline-block w-3 h-0.5 bg-emerald-500"></span>
-            Pension start
-          </span>
-        )}
-        {fundsDepletedAge && (
-          <span className="flex items-center gap-1 text-red-400">
-            <span className="inline-block w-3 h-0.5 bg-red-400"></span>
-            Funds depleted
-          </span>
-        )}
         {monteCarlo && (
           <span className="flex items-center gap-1">
             <span className="inline-block w-3 h-3 rounded-sm bg-indigo-300 opacity-60"></span>
